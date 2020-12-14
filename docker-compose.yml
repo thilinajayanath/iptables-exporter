@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  iptables-exporter:
+    image: thilinajayanath/iptables-exporter:latest
+    cap_add: 
+      - NET_ADMIN
+      - NET_RAW
+    network_mode: "host"
+    volumes:
+      - type: bind        
+        source: ./rules.json
+        target: /usr/share/iptables-exporter/rules.json
+        read_only: true

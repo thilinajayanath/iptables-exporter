@@ -1,0 +1,7 @@
+{
+    "rules": [
+        "INPUT -s 15.15.15.51 -j DROP",
+        "INPUT -s 15.15.15.151 -j DROP",
+        "INPUT -s 15.15.15.152 -j DROP"
+    ]
+}
